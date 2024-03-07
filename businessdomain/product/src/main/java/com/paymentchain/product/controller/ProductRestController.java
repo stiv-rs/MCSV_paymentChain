@@ -6,6 +6,7 @@
 package com.paymentchain.product.controller;
 
 import com.paymentchain.product.entities.Product;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
@@ -30,9 +31,13 @@ public class ProductRestController {
     
     @Autowired
     ProductRepository productRepository;
+
+    @Value("${user.role}")
+    private String role;
     
     @GetMapping()
     public List<Product> list() {
+        System.out.println("El rol en este momento es :".concat(role));
         return productRepository.findAll();
     }
     
