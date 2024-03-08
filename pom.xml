@@ -52,11 +52,11 @@
     <description>POM parent project for all spring boot projects</description>
    
  <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target> 
-        <spring-boot.version>2.7.5</spring-boot.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <spring-boot.version>3.2.2</spring-boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
-        <postgres.version>42.5.0</postgres.version>    
+        <postgres.version>42.7.2</postgres.version>
         <java-validation.version>2.0.1.Final</java-validation.version> 
         <dockerfile-maven-version>1.4.13</dockerfile-maven-version>
     </properties>
@@ -71,13 +71,10 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement>  
-        
-    
+    </dependencyManagement>
     <dependencies>
         <!--Gives us the ability to quickly setup and run services
-        Property Defaults,Automatic Restart,Live Reload,Global Settings,Remote Applications for debug example via http--> 	
-      
+        Property Defaults,Automatic Restart,Live Reload,Global Settings,Remote Applications for debug example via http-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -130,7 +127,7 @@
                     </execution>
                 </executions>
             </plugin>        
-            <!--   <plugin>
+               <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>${dockerfile-maven-version}</version>                               
@@ -140,18 +137,18 @@
                         <phase>package</phase>
                         <goals>                                              
                             <goal>build</goal>
-                           <goal>push</goal>
+                       <!--    <goal>push</goal>-->
                         </goals>
                     </execution>
                 </executions>
                 <configuration>                       
-                    <repository>digitalthinking/microservice-docker-${project.artifactId}</repository>
+                    <repository>paymentchain/microservice-docker-${project.artifactId}</repository>
                     <tag>${project.version}</tag>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
                 </configuration>
-            </plugin>-->  
+            </plugin>
             
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -13,12 +13,12 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>eurekaServer</module>
+        <module>eurekaserver</module>
         <module>adminserver</module>
-        <module>configServer</module>
+        <module>configserver</module>
     </modules>
    <properties>
-          <spring-cloud-dependencies.version>2021.0.4</spring-cloud-dependencies.version>
+          <spring-cloud-dependencies.version>2023.0.0</spring-cloud-dependencies.version>
     </properties>
     
      <!--Allows consolidate and centralized management of deendency version witout adding dependencies
