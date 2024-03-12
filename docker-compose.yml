@@ -58,7 +58,7 @@ services:
  ##########################################################################  
   product-catalog:
     container_name: bd-product-catalog
-    image: paymentchain/microservice-docker-product:0.0.1-SNAPSHOT
+    image: paymentchain/microservice-docker-products:0.0.1-SNAPSHOT
     environment:
        - JAVA_OPTS=
          -Xms256M 

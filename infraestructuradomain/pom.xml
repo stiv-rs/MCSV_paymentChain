@@ -11,14 +11,13 @@
     <groupId>com.paymentchain.infraestructuradomain</groupId>
     <artifactId>infraestructuradomain</artifactId>
     <packaging>pom</packaging>
-
     <modules>
         <module>eurekaserver</module>
         <module>adminserver</module>
         <module>configserver</module>
     </modules>
-   <properties>
-          <spring-cloud-dependencies.version>2023.0.0</spring-cloud-dependencies.version>
+    <properties>
+        <spring-cloud-dependencies.version>2021.0.0</spring-cloud-dependencies.version>
     </properties>
     
      <!--Allows consolidate and centralized management of deendency version witout adding dependencies
