@@ -5,19 +5,11 @@
  */
 package com.paymentchain.customer.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.Transient;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+
+import javax.persistence.*;
+import java.util.List;
 
 /**
  *
@@ -25,11 +17,13 @@ import lombok.Data;
  */
 @Entity
 @Data
+@Schema(name = "Customer", description = "Class that describe a customer model")
 public class Customer {
    @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
-   private long id;
-   private String name;
+    private long id;
+   @Schema(name = "name", required = true, example = "name", defaultValue = "name",description = "field that drecribe what is name of the customer")
+    private String name;
     private String code;
     private String iban;
     private String names;

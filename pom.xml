@@ -71,9 +71,9 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement>  
-        
-    
+    </dependencyManagement>
+
+
     <dependencies>
         <!--Gives us the ability to quickly setup and run services
         Property Defaults,Automatic Restart,Live Reload,Global Settings,Remote Applications for debug example via http--> 	
